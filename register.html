@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Kursus - English Mastery Course</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Specific styles for register.html */
+        .registration-section {
+            padding: 60px 0;
+            background-color: var(--light-bg);
+        }
+
+        .registration-section h2 {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .registration-form-container {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--dark-text);
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group select,
+        .form-group textarea {
+            width: calc(100% - 20px); /* Adjust for padding */
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .form-group textarea {
+            resize: vertical; /* Allow vertical resizing */
+            min-height: 100px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--secondary-color);
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--accent-color);
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-group button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="English Mastery Course Logo">
+                <h1>English Mastery Course</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="courses.html">Kursus <i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="courses.html#basic">Basic English</a>
+                            <a href="courses.html#intermediate">Intermediate English</a>
+                            <a href="courses.html#advanced">Advanced English</a>
+                            <a href="courses.html#business">Business English</a>
+                            <a href="courses.html#toefl">TOEFL Preparation</a>
+                            <a href="courses.html#ielts">IELTS Preparation</a>
+                        </div>
+                    </li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                    <li><a href="register.html" class="btn-register">Daftar / Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="registration-section">
+            <div class="container">
+                <h2>Formulir Pendaftaran Kursus</h2>
+                <div class="registration-form-container">
+                    <form id="registrationForm">
+                        <div class="form-group">
+                            <label for="fullName">Nama Lengkap <span style="color: red;">*</span></label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email <span style="color: red;">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Nomor Telepon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Pilihan Kursus <span style="color: red;">*</span></label>
+                            <select id="course" name="course" required>
+                                <option value="">-- Pilih Kursus --</option>
+                                <option value="Basic English">Basic English</option>
+                                <option value="Intermediate English">Intermediate English</option>
+                                <option value="Advanced English">Advanced English</option>
+                                <option value="Business English">Business English</option>
+                                <option value="TOEFL Preparation">TOEFL Preparation</option>
+                                <option value="IELTS Preparation">IELTS Preparation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="schedule">Pilihan Jadwal <span style="color: red;">*</span></label>
+                            <select id="schedule" name="schedule" required>
+                                <option value="">-- Pilih Jadwal --</option>
+                                <option value="Senin & Rabu (19.00 - 20.30 WIB)">Senin & Rabu (19.00 - 20.30 WIB)</option>
+                                <option value="Sabtu (09.00 - 12.00 WIB)">Sabtu (09.00 - 12.00 WIB)</option>
+                                </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan Tambahan (Opsional)</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Daftar Sekarang</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>English Mastery Course</h3>
+                    <p>Dedikasi kami untuk membantu Anda menguasai bahasa Inggris dengan metode efektif dan interaktif.</p>
+                </div>
+                <div class="footer-section contact-info">
+                    <h3>Kontak Kami</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Contoh No. 123, Jakarta Utara, Indonesia</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+628123456789">+62 812-3456-789</a></p>
+                    <p><i class="fas fa-envelope"></i> info@englishmastery.com</p>
+                </div>
+                <div class="footer-section social">
+                    <h3>Ikuti Kami</h3>
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="footer-section maps">
+                    <h3>Lokasi Kami</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dXXXX.XXXX!2dXXXXXXXX!3dXXXXXXXX!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQ5JzUyLjQiTiAxMDTCsDQ5JzU0LjQiRQ!5e0!3m2!1sen!2sid!4v1678901234567!5m2!1sen!2sid" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 English Mastery Course. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Pre-fill course selection if coming from courses.html
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const selectedCourse = urlParams.get('course');
+            if (selectedCourse) {
+                document.getElementById('course').value = selectedCourse;
+            }
+        });
+    </script>
+</body>
+</html>

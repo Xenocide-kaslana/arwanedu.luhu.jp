@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arwan Edu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="arwan_edu.jpg" alt="Arwan Edu Logo">
+                <h1>Arwan Edu</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="courses.html">Kursus <i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="courses.html#basic">Basic English</a>
+                            <a href="courses.html#intermediate">Intermediate English</a>
+                            <a href="courses.html#advanced">Advanced English</a>
+                            <a href="courses.html#business">Business English</a>
+                            <a href="courses.html#toefl">TOEFL Preparation</a>
+                            <a href="courses.html#ielts">IELTS Preparation</a>
+                        </div>
+                    </li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                    <li><a href="register.html" class="btn-register">Daftar / Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h2>Kuasai Bahasa Inggris, Buka Dunia Baru!</h2>
+                <p>Bergabunglah dengan kursus kami dan capai kefasihan yang Anda impikan.</p>
+                <a href="register.html" class="btn btn-primary">Daftar Sekarang</a>
+            </div>
+        </section>
+
+        <section id="why-us" class="info-section">
+            <div class="container">
+                <h3>Mengapa Memilih Kami?</h3>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h4>Pengajar Berpengalaman</h4>
+                        <p>Belajar dari instruktur profesional dan bersertifikat.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-book-open"></i>
+                        <h4>Materi Komprehensif</h4>
+                        <p>Kurikulum lengkap yang dirancang untuk semua tingkatan.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>Pembelajaran Interaktif</h4>
+                        <p>Sesi menarik dengan aktivitas dan diskusi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="popular-courses" class="info-section bg-light">
+            <div class="container">
+                <h3>Kursus Populer Kami</h3>
+                <div class="course-grid">
+                    <div class="course-card">
+                        <img src="basic_english.png" alt="Basic English Course">
+                        <h4>Basic English</h4>
+                        <p>Mulai perjalanan bahasa Inggris Anda dari dasar.</p>
+                        <a href="courses.html#basic" class="btn btn-secondary">Lihat Detail</a>
+                    </div>
+                    <div class="course-card">
+                        <img src="toefl.png" alt="TOEFL Preparation Course">
+                        <h4>TOEFL Preparation</h4>
+                        <p>Persiapan intensif untuk meraih skor TOEFL tinggi.</p>
+                        <a href="courses.html#toefl" class="btn btn-secondary">Lihat Detail</a>
+                    </div>
+                    <div class="course-card">
+                        <img src="bussiness_english.png" alt="Business English Course">
+                        <h4>Business English</h4>
+                        <p>Kuasai komunikasi bisnis dalam bahasa Inggris.</p>
+                        <a href="courses.html#business" class="btn btn-secondary">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="info-section">
+            <div class="container">
+                <h3 class="section-title">Apa Kata Mereka?</h3> <p class="section-subtitle">Suara peserta dan praktisi yang telah merasakan langsung manfaat kuliah, training, dan layanan kami.</p>
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide testimonial-item">
+                            <div class="user-info">
+                                <img src="images/avatar-diah.jpg" alt="Diah Rahmawati">
+                                <div class="text-info">
+                                    <h4>Diah Rahmawati</h4>
+                                    <p class="role">Trainer & Praktisi Keuangan</p>
+                                </div>
+                            </div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="quote">"Sebagai praktisi, saya merasa dihargai. Forum ini memberi ruang bagi kami untuk berbagi ilmu dan berkontribusi langsung kepada masyarakat."</p>
+                        </div>
+
+                        <div class="swiper-slide testimonial-item">
+                            <div class="user-info">
+                                <img src="images/avatar-andi.jpg" alt="Andi Wijaya">
+                                <div class="text-info">
+                                    <h4>Andi Wijaya</h4>
+                                    <p class="role">Mahasiswa Pascasarjana</p>
+                                </div>
+                            </div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p class="quote">"Platform ini membuat saya belajar langsung dari orang-orang yang benar-benar ahli. Materinya ringkas, jelas, dan langsung bisa diterapkan di proyek saya."</p>
+                        </div>
+
+                        <div class="swiper-slide testimonial-item">
+                            <div class="user-info">
+                                <img src="images/avatar-budi.jpg" alt="Budi Santosa">
+                                <div class="text-info">
+                                    <h4>Budi Santosa</h4>
+                                    <p class="role">CEO EduTech Startup</p>
+                                </div>
+                            </div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="quote">"Konsultasi dengan praktisi dari Forum Praktisi membuka wawasan baru untuk strategi bisnis kami. Kami dapat solusi yang konkret, bukan sekadar saran umum."</p>
+                        </div>
+
+                        <div class="swiper-slide testimonial-item">
+                            <div class="user-info">
+                                <img src="images/avatar-rina.jpg" alt="Rina Mulyani">
+                                <div class="text-info">
+                                    <h4>Rina Mulyani</h4>
+                                    <p class="role">HR Manager</p>
+                                </div>
+                            </div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p class="quote">"Saya mengikuti Kuliah Praktisi tentang Manajemen SDM, dan isinya sangat aplikatif. Bukan teori kosong, tapi pengalaman nyata di lapangan. Sangat membantu dalam..."</p>
+                        </div>
+
+                        <div class="swiper-slide testimonial-item">
+                            <div class="user-info">
+                                <img src="images/avatar-john.jpg" alt="John Doe">
+                                <div class="text-info">
+                                    <h4>John Doe</h4>
+                                    <p class="role">Mahasiswa</p>
+                                </div>
+                            </div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="quote">"Sangat puas dengan kualitas kursus di Arwan Edu. Pengajarnya interaktif dan materi disampaikan dengan sangat jelas. Rekomendasi!"</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>Arwan Edu</h3>
+                    <p>Dedikasi kami untuk membantu Anda menguasai bahasa Inggris dengan metode efektif dan interaktif.</p>
+                </div>
+                <div class="footer-section contact-info">
+                    <h3>Kontak Kami</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Contoh No. 123, Jakarta Utara, Indonesia</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+628123456789">+62 812-3456-789</a></p>
+                    <p><i class="fas fa-envelope"></i> info@arwanedu.com</p>
+                </div>
+                <div class="footer-section social">
+                    <h3>Ikuti Kami</h3>
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="footer-section maps">
+                    <h3>Lokasi Kami</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dXXXX.XXXX!2dXXXXXXXX!3dXXXXXXXX!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQ5JzUyLjQiTiAxMDTCsDQ5JzU0LjQiRQ!5e0!3m2!1sen!2sid!4v1678901234567!5m2!1sen!2sid" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Arwan Edu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Inisialisasi Swiper
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1, // Default: 1 slide untuk mobile
+            spaceBetween: 30,
+            loop: true, // Mengulang slide setelah slide terakhir
+            autoplay: {
+                delay: 3000, // Otomatis bergerak setiap 3 detik
+                disableOnInteraction: false, // Melanjutkan autoplay setelah interaksi pengguna
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true, // Pagination bisa diklik
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: { // Untuk layar >= 640px
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: { // Untuk layar >= 768px (seperti yang terlihat di gambar)
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1024: { // Untuk layar >= 1024px
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                },
+            },
+        });
+    </script>
+</body>
+</html>

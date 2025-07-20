@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Kursus - Arwan Edu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="registstyle.css">
+    <link rel="stylesheet" href="style.css"> <!-- Pastikan file style.css Anda ada dan berisi gaya umum -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="arwan_edu.svg" alt="Arwan Edu Logo">
+                <h1>Arwan Edu</h1>
+            </div>
+            <nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="Kursus.html">Kursus <i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a href="basic.html">Basic English</a>
+                <a href="intermediate.html">Intermediate English</a>
+                <a href="advanced.html">Advanced English</a>
+                <a href="business.html">Business English</a>
+                <a href="toefl.html">TOEFL Preparation</a>
+                <a href="ielts.html">IELTS Preparation</a>
+            </div>
+        </li>
+        <li><a href="about.html">Tentang Kami</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+        <li><a href="register.html" class="btn-register">Daftar / Login</a></li>
+    </ul>
+</nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="registration-section">
+            <div class="container">
+                <div class="registration-card">
+                    <h2>Formulir Pendaftaran Kursus</h2>
+                    <p class="form-subtitle">Isi formulir di bawah ini untuk mendaftar ke kursus yang Anda inginkan.</p>
+                    <form id="registrationForm">
+                        <div class="form-group">
+                            <label for="fullName">Nama Lengkap <span class="required-star">*</span></label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Contoh: Rina Mulyani" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Aktif <span class="required-star">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Contoh: rina@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Nomor WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Contoh: 081234567890">
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Pilihan Kursus <span class="required-star">*</span></label>
+                            <select id="course" name="course" required>
+                                <option value="">-- Pilih Kursus --</option>
+                                <option value="Basic English">Basic English</option>
+                                <option value="Intermediate English">Intermediate English</option>
+                                <option value="Advanced English">Advanced English</option>
+                                <option value="Business English">Business English</option>
+                                <option value="TOEFL Preparation">TOEFL Preparation</option>
+                                <option value="IELTS Preparation">IELTS Preparation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="schedule">Pilihan Jadwal <span class="required-star">*</span></label>
+                            <select id="schedule" name="schedule" required>
+                                <option value="">-- Pilih Jadwal --</option>
+                                <option value="Senin & Rabu (19.00 - 20.30 WIB)">Senin & Rabu (19.00 - 20.30 WIB)</option>
+                                <option value="Sabtu (09.00 - 12.00 WIB)">Sabtu (09.00 - 12.00 WIB)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan Tambahan (Opsional)</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tulis pesan tambahan Anda di sini..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-register-form">Daftar Sekarang</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <i class="fas fa-check-circle checkmark-icon"></i>
+                <h3>Pendaftaran Berhasil!</h3>
+                <p>Terima kasih! Pendaftaran Anda telah kami terima.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- New Footer Section -->
+    <footer class="new-footer-style">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>Arwan Edu</h3>
+                    <p>Komunitas yang mendedikasikan diri untuk menjembatani dunia industri dan pendidikan melalui kursus bahasa Inggris yang relevan dan praktis. Kami menghadirkan pengalaman nyata untuk mencetak generasi yang kompeten dan siap kerja.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+    <h3>Navigasi</h3>
+    <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="courses.html"><i class="fas fa-book-open"></i> Kursus</a></li>
+        <li><a href="about.html"><i class="fas fa-users"></i> Tentang Kami</a></li>
+        <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Kontak</a></li>
+        <li><a href="register.html"><i class="fas fa-user-plus"></i> Daftar / Login</a></li>
+    </ul>
+</div>
+
+                <div class="footer-contact">
+                    <h3>Kontak Kami</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</li>
+                        <li><i class="fas fa-phone"></i> +62 812-3456-789</li>
+                        <li><i class="fas fa-envelope"></i> info@arwanedu.com</li>
+                        <li><i class="fas fa-clock"></i> Senin - Jumat: 09:00 - 18:00 WIB</li>
+                    </ul>
+                </div>
+
+                <div class="footer-map-section">
+                    <h3>Lokasi Kami</h3>
+                    <div class="map-wrapper">
+                           <a href="https://maps.app.goo.gl/V5DDmDRx35inEFzbA" target="_blank" class="map-link">
+                               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d416.920579167653!2d106.95782680082965!3d-6.205632138915078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698b788b34c5bf%3A0x4df51d49bbc66d87!2sJl.%20Raya%20Rw.%20Kuning%20No.240%2C%20RT.1%2FRW.6%2C%20Pulo%20Gebang%2C%20Kec.%20Cakung%2C%20Kota%20Jakarta%20Timur%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2013950!5e0!3m2!1sid!2sid!4v1751967741779!5m2!1sid!2sid" class="map-frame" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                           </a>
+                    </div>
+                    <address>Jl. Contoh No. 123, Jakarta Utara, Indonesia</address>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#">Kebijakan Privasi</a>
+                    <a href="#">Syarat & Ketentuan</a>
+                </div>
+                <p>© 2025 Arwan Edu. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,605 @@
+/* Contact Page Specific Styles */
+
+/* Hero Section */
+.contact-hero-section {
+    background: linear-gradient(rgba(0, 77, 153, 0.85), rgba(0, 77, 153, 0.85)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 120px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-hero-section h2 {
+    font-size: 3.8em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    animation: fadeInDown 1s ease-out;
+}
+
+.contact-hero-section p {
+    font-size: 1.4em;
+    font-weight: 300;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.collaborate-link {
+    display: inline-block;
+    color: var(--white); /* Changed to white for better contrast on dark background */
+    background-color: var(--secondary-color);
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.collaborate-link:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* Info Grid Section */
+.contact-info-section {
+    padding: 80px 0; /* Increased padding */
+    text-align: center;
+    background-color: var(--white); /* Changed to white for consistency */
+}
+
+.contact-info-section h3 {
+    font-size: 2.8em; /* Larger heading */
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.contact-info-section .subtitle {
+    font-size: 1.2em; /* Larger subtitle */
+    color: var(--grey-text);
+    margin-bottom: 60px; /* More space below subtitle */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.info-block {
+    background-color: var(--light-bg); /* Lighter background for info blocks */
+    padding: 40px 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.info-block:hover {
+    transform: translateY(-8px); /* More pronounced lift effect */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    border-color: var(--secondary-color); /* Highlight border on hover */
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    background-color: var(--secondary-color); /* Primary color for icon circle */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 25px; /* More space below icon */
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.icon-circle i {
+    font-size: 2.8em; /* Larger icon */
+    color: var(--white); /* White icon */
+}
+
+.info-block h4 {
+    font-size: 1.8em; /* Larger heading */
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.info-block p {
+    color: var(--dark-text); /* Darker text for better readability */
+    font-size: 1em; /* Slightly larger text */
+    min-height: 50px; /* Ensure consistent height */
+    margin-bottom: 25px; /* More space before links */
+}
+
+.contact-number, .contact-email, .contact-website {
+    display: block;
+    font-size: 1.1em;
+    font-weight: 600; /* Bolder text */
+    color: var(--primary-color); /* Primary color for links */
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.contact-number:hover, .contact-email:hover, .contact-website:hover {
+    color: var(--secondary-color);
+}
+
+.btn-whatsapp, .btn-email, .btn-website {
+    display: inline-flex; /* Use flex for button content */
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px; /* Larger padding */
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-whatsapp {
+    background-color: #25d366;
+    color: #fff;
+    border: 2px solid #25d366;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128c7e;
+    border-color: #128c7e;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(37, 211, 102, 0.3);
+}
+
+.btn-email, .btn-website {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-email:hover, .btn-website:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn-email i, .btn-website i, .btn-whatsapp i {
+    margin-right: 10px; /* More space for icons */
+    font-size: 1em;
+}
+
+/* Details Section */
+.contact-details-section {
+    padding: 80px 0; /* Increased padding */
+    text-align: center;
+    background-color: var(--light-bg); /* Alternating background */
+}
+
+.contact-details-section h3 {
+    font-size: 2.8em; /* Larger heading */
+    color: var(--primary-color);
+}
+
+.contact-details-section .subtitle {
+    font-size: 1.2em; /* Larger subtitle */
+    color: var(--grey-text);
+    margin-bottom: 60px; /* More space below subtitle */
+}
+
+.contact-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+.details-block {
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.details-block:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.operating-hours {
+    background-color: var(--white);
+    border: 1px solid #e9ecef;
+}
+
+.office-location {
+    background-color: var(--primary-color); /* Dark blue background for office location */
+    color: var(--white);
+}
+
+.office-location a {
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+.office-location a:hover {
+    color: var(--secondary-color);
+}
+
+/* New wrapper for icon and title */
+.header-with-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Space below the icon and title line */
+}
+
+/* Icon circle for details blocks */
+.icon-top-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px; /* Space between icon and title */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for icon circle */
+}
+
+.operating-hours .icon-top-circle {
+    background-color: var(--secondary-color); /* Bright blue for operational hours icon background */
+}
+
+.operating-hours .icon-top-circle i {
+    font-size: 2.5em;
+    color: var(--white); /* White icon */
+}
+
+.office-location .icon-top-circle {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white for map icon background */
+}
+
+.office-location .icon-top-circle i {
+    font-size: 2.5em;
+    color: var(--white); /* White for map pin icon */
+}
+
+.details-block h4 {
+    font-size: 1.8em; /* Larger heading */
+    margin: 0; /* Remove default margins to align with flexbox */
+    color: inherit; /* Inherit color from parent (.office-location) */
+}
+
+.operating-hours ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 15px; /* More space between h4 and list */
+}
+
+.operating-hours li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0; /* More padding for list items */
+    border-bottom: 1px solid #e9ecef;
+    font-size: 1.05em; /* Slightly larger text */
+    color: var(--dark-text);
+}
+
+.operating-hours li:last-child {
+    border-bottom: none;
+}
+
+.operating-hours li .time-value {
+    font-weight: 700; /* Bolder time value */
+    color: var(--primary-color);
+}
+
+.operating-hours li .time-value.closed {
+    color: #dc3545; /* Red for "Tutup" */
+}
+
+.operating-hours li .time-value.available,
+.operating-hours li .time-value.response-time {
+    color: var(--secondary-color); /* Consistent bright blue */
+}
+
+.operating-hours .small-text {
+    font-size: 0.95em; /* Slightly larger small text */
+    color: var(--grey-text);
+}
+
+.office-location address {
+    font-style: normal;
+    line-height: 1.8; /* Increased line height */
+    margin-bottom: 25px; /* More space */
+    margin-top: 15px; /* More space between h4 and address */
+}
+
+.office-location p { /* This is the descriptive paragraph */
+    margin-bottom: 30px; /* More space before button */
+    color: var(--white);
+    opacity: 0.9;
+    font-size: 1em;
+}
+
+.btn-map {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: 2px solid var(--secondary-color);
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.btn-map:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn-map i {
+    margin-right: 10px;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: 80px 0; /* Increased padding */
+    background-color: var(--white); /* Alternating background */
+}
+
+.form-card {
+    background-color: var(--light-bg); /* Lighter background for form card */
+    padding: 50px; /* More padding */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Stronger shadow */
+    border-top: 8px solid var(--primary-color); /* Thicker, primary colored border top */
+    max-width: 750px; /* Wider form */
+    margin: 0 auto;
+}
+
+.form-card h3 {
+    font-size: 2.5em; /* Larger heading */
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.form-card .form-subtitle {
+    text-align: center;
+    color: var(--grey-text);
+    font-size: 1.1em;
+    margin-bottom: 40px; /* More space below subtitle */
+}
+
+.form-group {
+    margin-bottom: 25px; /* More space between form groups */
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600; /* Bolder label */
+    margin-bottom: 10px;
+    color: var(--dark-text);
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 15px; /* Larger padding */
+    border: 1px solid #ced4da;
+    border-radius: 10px; /* More rounded corners */
+    font-size: 1.05em; /* Slightly larger font */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder, .form-group textarea::placeholder {
+    color: #adb5bd;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3); /* Stronger focus shadow */
+}
+
+.form-group textarea {
+    min-height: 160px; /* Taller textarea */
+}
+
+.btn-send-message {
+    width: 100%;
+    padding: 18px; /* Larger button */
+    background-color: var(--accent-color); /* Green accent color */
+    color: #fff;
+    font-size: 1.2em; /* Larger font */
+    font-weight: 700; /* Bolder font */
+    border: none;
+    border-radius: 10px; /* More rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.3);
+}
+
+.btn-send-message:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(40, 167, 69, 0.4);
+}
+
+.contact-tips {
+    margin-top: 40px; /* More space above tips */
+    padding: 25px; /* More padding */
+    background-color: #e6f7ff; /* Lighter blue background */
+    border-left: 6px solid var(--secondary-color); /* Thicker, secondary colored border */
+    border-radius: 10px; /* More rounded corners */
+}
+
+.contact-tips h4 {
+    font-size: 1.3em; /* Larger heading */
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-tips h4 i {
+    margin-right: 10px;
+    color: var(--secondary-color);
+    font-size: 1.2em;
+}
+
+.contact-tips ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-tips li {
+    margin-bottom: 10px;
+    color: var(--dark-text);
+    font-size: 1em;
+    display: flex;
+    align-items: flex-start;
+}
+
+.contact-tips li i {
+    color: var(--accent-color); /* Green checkmark */
+    margin-right: 12px;
+    font-size: 1.1em;
+    margin-top: 3px;
+}
+
+
+/* Responsive Design for Contact Page */
+@media (max-width: 992px) {
+    .contact-hero-section h2 {
+        font-size: 3em;
+    }
+    .contact-hero-section p {
+        font-size: 1.2em;
+    }
+    .contact-info-section h3, .contact-details-section h3, .form-card h3 {
+        font-size: 2.2em;
+    }
+    .contact-info-section .subtitle, .contact-details-section .subtitle, .form-card .form-subtitle {
+        font-size: 1em;
+    }
+    .info-block, .details-block, .form-card {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-hero-section {
+        padding: 80px 0;
+    }
+    .contact-hero-section h2 {
+        font-size: 2.5em;
+    }
+    .contact-hero-section p {
+        font-size: 1em;
+    }
+    .contact-info-section, .contact-details-section, .contact-form-section {
+        padding: 50px 0;
+    }
+    .contact-details-grid {
+        grid-template-columns: 1fr;
+    }
+    .info-block, .details-block, .form-card {
+        padding: 25px;
+    }
+    .header-with-icon {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .icon-top-circle {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .details-block h4 {
+        text-align: center;
+    }
+    .operating-hours ul {
+        text-align: left; /* Keep list items left-aligned */
+    }
+    .operating-hours li {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .office-location address,
+    .office-location p {
+        text-align: center;
+    }
+    .form-card {
+        padding: 30px;
+    }
+    .contact-tips {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero-section h2 {
+        font-size: 2em;
+    }
+    .contact-info-section h3, .contact-details-section h3, .form-card h3 {
+        font-size: 1.8em;
+    }
+    .contact-info-section .subtitle, .contact-details-section .subtitle, .form-card .form-subtitle {
+        font-size: 0.9em;
+    }
+    .icon-circle, .icon-top-circle {
+        width: 60px;
+        height: 60px;
+    }
+    .icon-circle i, .icon-top-circle i {
+        font-size: 2em;
+    }
+    .info-block h4, .details-block h4 {
+        font-size: 1.3em;
+    }
+    .btn-whatsapp, .btn-email, .btn-website, .btn-map, .btn-send-message {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    .form-card {
+        padding: 20px;
+    }
+    .form-group input, .form-group textarea {
+        padding: 12px;
+        font-size: 0.95em;
+    }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

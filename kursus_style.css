@@ -1,0 +1,304 @@
+/* Kursus Page Specific Styles */
+
+/* Custom CSS Variables for Kursus Page */
+:root {
+    --kursus-hero-color: #0056b3; /* A slightly darker blue for hero */
+    --kursus-card-bg: #ffffff; /* White card background */
+    --kursus-card-border: #e0e0e0; /* Light border for cards */
+    --kursus-icon-color: #007bff; /* Bright blue for icons */
+}
+
+/* Hero Section */
+.kursus-hero-section {
+    background: linear-gradient(rgba(0, 77, 153, 0.85), rgba(0, 77, 153, 0.85)), url('https://images.unsplash.com/photo-1517849845536-89287223a770?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 120px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content-kursus {
+    max-width: 900px;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero-content-kursus .hero-icon {
+    font-size: 4em;
+    color: var(--accent-color); /* Green accent for the icon */
+    margin-bottom: 20px;
+    animation: bounceIn 1s ease-out;
+}
+
+.hero-content-kursus h2 {
+    font-size: 3.8em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.hero-content-kursus p {
+    font-size: 1.4em;
+    font-weight: 300;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* All Courses Section */
+.all-courses-section {
+    padding: 80px 0;
+    background-color: var(--light-bg); /* Light background for the section */
+}
+
+.course-grid-all {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.course-card-item {
+    background-color: var(--kursus-card-bg); /* White card background */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    border: 1px solid var(--kursus-card-border); /* Light border */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space */
+}
+
+.course-card-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border-color: var(--secondary-color); /* Highlight border on hover */
+}
+
+.course-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background-color: var(--light-bg); /* Match section background */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 25px; /* Center and space below */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.course-card-item i {
+    font-size: 3.5em;
+    color: var(--kursus-icon-color); /* Bright blue icon color */
+}
+
+.course-card-item h4 {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.course-card-item p {
+    font-size: 1em;
+    color: var(--grey-text);
+    margin-bottom: 25px; /* Space before button */
+    flex-grow: 1; /* Allow paragraph to grow and push button down */
+}
+
+.btn-view-detail {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+    width: fit-content; /* Adjust button width to content */
+    margin: 0 auto; /* Center the button */
+}
+
+.btn-view-detail:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Call to Action Section (Reusing general styles) */
+.cta-section.bg-primary-dark {
+    background: linear-gradient(rgba(0, 77, 153, 0.9), rgba(0, 123, 255, 0.9)), url('https://images.unsplash.com/photo-1503676106-9c4c4784a92c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.cta-section.bg-primary-dark h3 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    color: var(--white);
+}
+
+.cta-section.bg-primary-dark p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    color: var(--white);
+}
+
+.btn-accent-cta {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: 2px solid var(--accent-color);
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.3);
+}
+
+.btn-accent-cta:hover {
+    background-color: #218838;
+    border-color: #218838;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(40, 167, 69, 0.4);
+}
+
+/* General info-section styles (copied for consistency, ensure these are also in style.css) */
+.info-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.info-section h3 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.info-section .subtitle {
+    font-size: 1.1em;
+    color: var(--grey-text);
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design for Kursus Page */
+@media (max-width: 992px) {
+    .kursus-hero-section {
+        padding: 100px 0;
+    }
+    .hero-content-kursus h2 {
+        font-size: 3em;
+    }
+    .hero-content-kursus p {
+        font-size: 1.2em;
+    }
+    .course-grid-all {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+    .course-card-item {
+        padding: 25px;
+    }
+    .course-card-item h4 {
+        font-size: 1.6em;
+    }
+    .course-card-item p {
+        font-size: 0.95em;
+    }
+    .btn-view-detail {
+        padding: 10px 25px;
+        font-size: 0.95em;
+    }
+    .cta-section.bg-primary-dark h3 {
+        font-size: 2.5em;
+    }
+    .cta-section.bg-primary-dark p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .kursus-hero-section {
+        padding: 80px 0;
+    }
+    .hero-content-kursus .hero-icon {
+        font-size: 3.5em;
+    }
+    .hero-content-kursus h2 {
+        font-size: 2.5em;
+    }
+    .hero-content-kursus p {
+        font-size: 1em;
+    }
+    .info-section {
+        padding: 50px 0;
+    }
+    .info-section h3 {
+        font-size: 2em;
+    }
+    .info-section .subtitle {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+    .course-grid-all {
+        grid-template-columns: 1fr; /* Stack items on small screens */
+        gap: 20px;
+    }
+    .course-card-item {
+        padding: 20px;
+    }
+    .course-card-item i {
+        font-size: 3em;
+    }
+    .course-card-item h4 {
+        font-size: 1.4em;
+    }
+    .cta-section.bg-primary-dark h3 {
+        font-size: 2em;
+    }
+    .cta-section.bg-primary-dark p {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content-kursus h2 {
+        font-size: 2em;
+    }
+    .hero-content-kursus p {
+        font-size: 0.9em;
+    }
+    .btn-primary-hero {
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
+    .info-section h3 {
+        font-size: 1.8em;
+    }
+    .course-card-item i {
+        font-size: 2.5em;
+    }
+    .course-card-item h4 {
+        font-size: 1.2em;
+    }
+    .course-card-item p {
+        font-size: 0.9em;
+    }
+    .btn-view-detail {
+        padding: 8px 20px;
+        font-size: 0.85em;
+    }
+}

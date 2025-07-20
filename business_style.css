@@ -1,0 +1,392 @@
+/* Business English Course Page Specific Styles */
+
+/* Define a new accent color for Business English - Deep Teal */
+:root {
+    --business-accent-color: #008080; /* Deep Teal */
+    --business-secondary-accent: #006666; /* Darker Teal */
+    --business-text-color: #333; /* Dark text for readability */
+}
+
+/* Hero Section */
+.business-hero-section {
+    background: linear-gradient(rgba(0, 128, 128, 0.85), rgba(0, 102, 102, 0.85)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 120px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content-business {
+    max-width: 900px;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero-content-business .hero-icon {
+    font-size: 4em;
+    color: var(--white); /* White icon on teal background */
+    margin-bottom: 20px;
+    animation: pulse 1.5s infinite ease-in-out; /* Subtle pulsing animation */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.hero-content-business h2 {
+    font-size: 3.8em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.hero-content-business p {
+    font-size: 1.4em;
+    font-weight: 300;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.btn-primary-hero {
+    background-color: var(--white); /* White button */
+    color: var(--business-accent-color); /* Teal text on white button */
+    border: 2px solid var(--white);
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary-hero:hover {
+    background-color: var(--business-accent-color); /* Teal background on hover */
+    color: var(--white); /* White text on hover */
+    border-color: var(--business-accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 128, 128, 0.4);
+}
+
+/* Course Overview Section (What You'll Learn) */
+.course-overview-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.learning-points-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.learning-item {
+    background-color: var(--light-bg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.learning-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    border-color: var(--business-accent-color); /* Teal border on hover */
+}
+
+.learning-item i {
+    font-size: 3.5em;
+    color: var(--business-accent-color); /* Teal icons */
+    margin-bottom: 20px;
+}
+
+.learning-item h4 {
+    font-size: 1.6em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.learning-item p {
+    font-size: 1em;
+    color: var(--grey-text);
+}
+
+/* Target Audience Section */
+.target-audience-section {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.audience-list {
+    max-width: 800px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: 1fr; /* Stack items by default */
+    gap: 20px;
+}
+
+.audience-item {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.audience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.audience-item i {
+    font-size: 2.2em;
+    color: var(--business-accent-color); /* Teal icons */
+    margin-right: 20px;
+    flex-shrink: 0;
+    margin-top: 5px; /* Align icon with text start */
+}
+
+.audience-item p {
+    font-size: 1.1em;
+    color: var(--dark-text);
+    margin: 0;
+}
+
+/* Methodology Section */
+.methodology-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.method-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.method-item {
+    background-color: var(--light-bg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.method-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    border-color: var(--business-accent-color); /* Teal border on hover */
+}
+
+.method-item i {
+    font-size: 3.5em;
+    color: var(--business-accent-color); /* Teal icons */
+    margin-bottom: 20px;
+}
+
+.method-item h4 {
+    font-size: 1.6em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.method-item p {
+    font-size: 1em;
+    color: var(--grey-text);
+}
+
+/* Call to Action Section (Specific to Course Pages) */
+.cta-section.bg-primary-dark {
+    background: linear-gradient(rgba(0, 128, 128, 0.9), rgba(0, 102, 102, 0.9)), url('https://images.unsplash.com/photo-1503676106-9c4c4784a92c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.cta-section.bg-primary-dark h3 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    color: var(--white);
+}
+
+.cta-section.bg-primary-dark p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    color: var(--white);
+}
+
+.btn-accent-cta {
+    background-color: var(--white); /* White button */
+    color: var(--business-accent-color); /* Teal text on white button */
+    border: 2px solid var(--white);
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+}
+
+.btn-accent-cta:hover {
+    background-color: var(--business-accent-color); /* Teal background on hover */
+    color: var(--white); /* White text on hover */
+    border-color: var(--business-accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 128, 128, 0.4);
+}
+
+/* General info-section styles (copied for consistency, ensure these are also in style.css) */
+.info-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.info-section h3 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.info-section .subtitle {
+    font-size: 1.1em;
+    color: var(--grey-text);
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design for Business English Page */
+@media (max-width: 992px) {
+    .business-hero-section {
+        padding: 100px 0;
+    }
+    .hero-content-business h2 {
+        font-size: 3em;
+    }
+    .hero-content-business p {
+        font-size: 1.2em;
+    }
+    .learning-points-grid, .method-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+    .audience-list {
+        padding: 0 20px;
+    }
+    .audience-item i {
+        font-size: 2em;
+        margin-right: 15px;
+    }
+    .audience-item p {
+        font-size: 1em;
+    }
+    .cta-section.bg-primary-dark h3 {
+        font-size: 2.5em;
+    }
+    .cta-section.bg-primary-dark p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .business-hero-section {
+        padding: 80px 0;
+    }
+    .hero-content-business .hero-icon {
+        font-size: 3.5em;
+    }
+    .hero-content-business h2 {
+        font-size: 2.5em;
+    }
+    .hero-content-business p {
+        font-size: 1em;
+    }
+    .btn-primary-hero, .btn-accent-cta {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+    .info-section {
+        padding: 50px 0;
+    }
+    .info-section h3 {
+        font-size: 2em;
+    }
+    .info-section .subtitle {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+    .learning-points-grid, .method-grid {
+        grid-template-columns: 1fr; /* Stack items on small screens */
+        gap: 20px;
+    }
+    .learning-item, .method-item {
+        padding: 25px;
+    }
+    .learning-item i, .method-item i {
+        font-size: 3em;
+    }
+    .learning-item h4, .method-item h4 {
+        font-size: 1.4em;
+    }
+    .audience-item {
+        flex-direction: column; /* Stack icon and text */
+        align-items: center;
+        text-align: center;
+    }
+    .audience-item i {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .audience-item p {
+        font-size: 0.95em;
+    }
+    .cta-section.bg-primary-dark h3 {
+        font-size: 2em;
+    }
+    .cta-section.bg-primary-dark p {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content-business h2 {
+        font-size: 2em;
+    }
+    .hero-content-business p {
+        font-size: 0.9em;
+    }
+    .btn-primary-hero, .btn-accent-cta {
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
+    .info-section h3 {
+        font-size: 1.8em;
+    }
+    .learning-item i, .method-item i {
+        font-size: 2.5em;
+    }
+    .learning-item h4, .method-item h4 {
+        font-size: 1.2em;
+    }
+    .audience-item p {
+        font-size: 0.9em;
+    }
+}

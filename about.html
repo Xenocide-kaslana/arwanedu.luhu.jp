@@ -4,228 +4,223 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tentang Kami - Arwan Edu</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Specific styles for about.html */
-        .about-section {
-            padding: 60px 0;
-        }
-
-        .about-section h2 {
-            font-size: 2.5em;
-            color: var(--primary-color);
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .about-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            align-items: flex-start;
-        }
-
-        .about-text {
-            flex: 2;
-            min-width: 300px;
-        }
-
-        .about-text h3 {
-            font-size: 1.8em;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-        }
-
-        .about-text p {
-            margin-bottom: 15px;
-            line-height: 1.8;
-            text-align: justify;
-        }
-
-        .about-text ul {
-            list-style: disc;
-            margin-left: 20px;
-            margin-bottom: 20px;
-        }
-
-        .about-text ul li {
-            margin-bottom: 8px;
-        }
-
-        .about-image {
-            flex: 1;
-            min-width: 280px;
-            text-align: center;
-        }
-
-        .about-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .team-section {
-            padding: 60px 0;
-            background-color: var(--light-bg);
-            text-align: center;
-        }
-
-        .team-section h3 {
-            font-size: 2.2em;
-            color: var(--primary-color);
-            margin-bottom: 40px;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .team-member {
-            background-color: var(--white);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            text-align: center;
-        }
-
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 15px;
-            border: 3px solid var(--secondary-color);
-        }
-
-        .team-member h4 {
-            font-size: 1.4em;
-            margin-bottom: 5px;
-            color: var(--primary-color);
-        }
-
-        .team-member p {
-            font-style: italic;
-            color: #777;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="aboutstyle.css"> <!-- Link ke CSS baru untuk halaman About Us -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
-                <img src="arwan_edu.jpg" alt="English Mastery Course Logo">
+                <img src="arwan_edu.svg" alt="Arwan Edu Logo">
                 <h1>Arwan Edu</h1>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a href="courses.html">Kursus <i class="fas fa-caret-down"></i></a>
-                        <div class="dropdown-content">
-                            <a href="courses.html#basic">Basic English</a>
-                            <a href="courses.html#intermediate">Intermediate English</a>
-                            <a href="courses.html#advanced">Advanced English</a>
-                            <a href="courses.html#business">Business English</a>
-                            <a href="courses.html#toefl">TOEFL Preparation</a>
-                            <a href="courses.html#ielts">IELTS Preparation</a>
-                        </div>
-                    </li>
-                    <li><a href="about.html">Tentang Kami</a></li>
-                    <li><a href="contact.html">Kontak</a></li>
-                    <li><a href="register.html" class="btn-register">Daftar / Login</a></li>
-                </ul>
-            </nav>
+            <!-- HEADER NAVIGASI -->
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="Kursus.html">Kursus <i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a href="basic.html">Basic English</a>
+                <a href="intermediate.html">Intermediate English</a>
+                <a href="advanced.html">Advanced English</a>
+                <a href="business.html">Business English</a>
+                <a href="toefl.html">TOEFL Preparation</a>
+                <a href="ielts.html">IELTS Preparation</a>
+            </div>
+        </li>
+        <li><a href="about.html">Tentang Kami</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+        <li><a href="register.html" class="btn-register">Daftar / Login</a></li>
+    </ul>
+</nav>
         </div>
     </header>
 
     <main>
-        <section class="about-section">
+        <!-- Hero Section for About Us -->
+        <section class="about-hero-section">
             <div class="container">
-                <h2>Tentang Arwan Edu</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <h3>Sejarah Kami</h3>
-                        <p>Arwan Edu didirikan pada tahun 2018 dengan visi untuk menyediakan pendidikan bahasa Inggris berkualitas tinggi yang mudah diakses oleh semua kalangan. Bermula dari sebuah les privat kecil, kami telah berkembang menjadi salah satu pusat kursus bahasa Inggris terkemuka di Jakarta, melayani ratusan siswa setiap tahunnya.</p>
-                        <p>Kami percaya bahwa penguasaan bahasa Inggris adalah kunci untuk membuka peluang global, baik dalam pendidikan, karier, maupun kehidupan pribadi. Oleh karena itu, kami berkomitmen untuk menciptakan lingkungan belajar yang inspiratif, interaktif, dan efektif.</p>
+                <div class="hero-content-about">
+                    <h2>Kisah Kami: Dedikasi untuk Keunggulan Bahasa Inggris</h2>
+                    <p>Sejak 2018, Arwan Edu telah menjadi jembatan bagi ratusan individu untuk menguasai bahasa Inggris dan membuka pintu peluang global.</p>
+                </div>
+            </div>
+        </section>
 
-                        <h3>Visi & Misi</h3>
-                        <h4>Visi:</h4>
-                        <ul>
-                            <li>Menjadi pusat kursus bahasa Inggris terdepan yang menghasilkan pembelajar fasih dan percaya diri.</li>
-                        </ul>
-                        <h4>Misi:</h4>
-                        <ul>
-                            <li>Menyediakan kurikulum yang relevan dan terkini sesuai standar internasional.</li>
-                            <li>Menggunakan metode pengajaran yang inovatif dan berpusat pada siswa.</li>
-                            <li>Membangun tim pengajar yang kompeten, berdedikasi, dan peduli.</li>
-                            <li>Menciptakan lingkungan belajar yang positif, suportif, dan menyenangkan.</li>
-                        </ul>
+        <!-- Our Story Section -->
+        <section class="our-story-section info-section">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-image">
+                        <img src="https://placehold.co/600x400/004d99/ffffff?text=Our+Story" alt="Our Story Image">
                     </div>
-                    <div class="about-image">
-                        <img src="about_us.png" alt="About Us Illustration">
+                    <div class="story-content">
+                        <h3>Perjalanan Arwan Edu</h3>
+                        <p>Didirikan pada tahun <strong>2018</strong>, Arwan Edu bermula dari sebuah les privat kecil dengan impian besar: menyediakan pendidikan bahasa Inggris berkualitas tinggi yang dapat diakses oleh semua kalangan. Kami percaya bahwa penguasaan bahasa Inggris adalah kunci untuk membuka peluang global, baik dalam pendidikan, karier, maupun kehidupan pribadi.</p>
+                        <p>Sejak awal, kami berkomitmen untuk menciptakan lingkungan belajar yang inspiratif, interaktif, dan efektif. Setiap langkah perjalanan kami adalah tentang memberdayakan siswa untuk tidak hanya belajar bahasa, tetapi juga membangun kepercayaan diri dan mencapai potensi penuh mereka.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="team-section">
+        <!-- Vision & Mission Section -->
+        <section class="vision-mission-section info-section bg-gray">
+            <div class="container">
+                <h3>Visi & Misi Kami</h3>
+                <div class="vm-grid">
+                    <div class="vision-block">
+                        <i class="fas fa-eye"></i>
+                        <h4>Visi</h4>
+                        <p>Menjadi pusat kursus bahasa Inggris terdepan yang menghasilkan pembelajar fasih dan percaya diri, siap menghadapi tantangan global.</p>
+                    </div>
+                    <div class="mission-block">
+                        <i class="fas fa-bullseye"></i>
+                        <h4>Misi</h4>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Menyediakan kurikulum yang relevan dan terkini sesuai standar internasional.</li>
+                            <li><i class="fas fa-check-circle"></i> Menggunakan metode pengajaran yang inovatif dan berpusat pada siswa.</li>
+                            <li><i class="fas fa-check-circle"></i> Membangun tim pengajar yang kompeten, berdedikasi, dan peduli.</li>
+                            <li><i class="fas fa-check-circle"></i> Menciptakan lingkungan belajar yang positif, suportif, dan menyenangkan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Values Section -->
+        <section class="values-section info-section">
+            <div class="container">
+                <h3>Nilai-Nilai Inti Kami</h3>
+                <p class="subtitle">Nilai-nilai ini membimbing setiap langkah dan keputusan kami dalam memberikan pendidikan terbaik.</p>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Inovasi</h4>
+                        <p>Terus berinovasi dalam metode dan materi pengajaran untuk hasil terbaik.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Integritas</h4>
+                        <p>Menjunjung tinggi kejujuran dan etika dalam setiap interaksi.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-users"></i>
+                        <h4>Kolaborasi</h4>
+                        <p>Mendorong kerja sama dan dukungan antar siswa dan pengajar.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-star-half-alt"></i>
+                        <h4>Keunggulan</h4>
+                        <p>Berkomitmen pada kualitas tinggi dalam setiap aspek layanan kami.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section info-section bg-gray">
             <div class="container">
                 <h3>Tim Pengajar Kami</h3>
+                <p class="subtitle">Bertemu dengan para ahli yang akan membimbing perjalanan bahasa Inggris Anda.</p>
                 <div class="team-grid">
                     <div class="team-member">
-                        <img src="images/teacher1.jpg" alt="Teacher Name 1">
+                        <img src="https://placehold.co/180x180/007bff/ffffff?text=Teacher+1" alt="Teacher Name 1">
                         <h4>Jane Doe, M.Ed.</h4>
                         <p>Spesialis General English & IELTS</p>
                     </div>
                     <div class="team-member">
-                        <img src="images/teacher2.jpg" alt="Teacher Name 2">
+                        <img src="https://placehold.co/180x180/007bff/ffffff?text=Teacher+2" alt="Teacher Name 2">
                         <h4>John Smith, Ph.D.</h4>
                         <p>Ahli TOEFL & Business English</p>
                     </div>
                     <div class="team-member">
-                        <img src="images/teacher3.jpg" alt="Teacher Name 3">
-                        <h4>Maria Garcia, B.A.</h4>
+                        <img src="https://placehold.co/180x180/007bff/ffffff?text=Teacher+3" alt="Teacher Name 3">
+                        <h4>Sarah Lee, B.A.</h4>
                         <p>Pengajar Basic & Intermediate English</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://placehold.co/180x180/007bff/ffffff?text=Teacher+4" alt="Teacher Name 4">
+                        <h4>Michael Brown, M.A.</h4>
+                        <p>Koordinator Kurikulum</p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section info-section">
+            <div class="container">
+                <h3>Siap Memulai Perjalanan Bahasa Inggris Anda?</h3>
+                <p>Bergabunglah dengan Arwan Edu dan rasakan pengalaman belajar yang berbeda!</p>
+                <a href="register.html" class="btn btn-primary">Daftar Sekarang</a>
+            </div>
+        </section>
     </main>
 
-    <footer>
+    <footer class="new-footer-style">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section about">
+            <div class="footer-grid">
+                <div class="footer-about">
                     <h3>Arwan Edu</h3>
-                    <p>Dedikasi kami untuk membantu Anda menguasai bahasa Inggris dengan metode efektif dan interaktif.</p>
+                    <p>Komunitas yang mendedikasikan diri untuk menjembatani dunia industri dan pendidikan melalui kursus bahasa Inggris yang relevan dan praktis. Kami menghadirkan pengalaman nyata untuk mencetak generasi yang kompeten dan siap kerja.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
-                <div class="footer-section contact-info">
+
+                <div class="footer-nav">
+                    <h3>Navigasi</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="courses.html"><i class="fas fa-book-open"></i> Kursus</a></li>
+                        <li><a href="about.html"><i class="fas fa-users"></i> Tentang Kami</a></li>
+                        <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Kontak</a></li>
+                        <li><a href="register.html"><i class="fas fa-user-plus"></i> Daftar / Login</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
                     <h3>Kontak Kami</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Jl. Contoh No. 123, Jakarta Utara, Indonesia</p>
-                    <p><i class="fas fa-phone"></i> <a href="tel:+6285798024920">+62 857-9802-4920</a></p>
-                    <p><i class="fas fa-envelope"></i> info@englishmastery.com</p>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</li>
+                        <li><i class="fas fa-phone"></i> +62 812-3456-789</li>
+                        <li><a href="mailto:info@arwanedu.com"><i class="fas fa-envelope"></i> info@arwanedu.com</a></li>
+                        <li><i class="fas fa-clock"></i> Senin - Jumat: 09:00 - 18:00 WIB</li>
+                    </ul>
                 </div>
-                <div class="footer-section social">
-                    <h3>Ikuti Kami</h3>
-                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <div class="footer-section maps">
+
+                <div class="footer-map-section">
                     <h3>Lokasi Kami</h3>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dXXXX.XXXX!2dXXXXXXXX!3dXXXXXXXX!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQ5JzUyLjQiTiAxMDTCsDQ5JzU0LjQiRQ!5e0!3m2!1sen!2sid!4v1678901234567!5m2!1sen!2sid" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="map-wrapper">
+                           <a href="https://maps.app.goo.gl/V5DDmDRx35inEFzbA" target="_blank" class="map-link">
+                               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d416.920579167653!2d106.95782680082965!3d-6.205632138915078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698b788b34c5bf%3A0x4df51d49bbc66d87!2sJl.%20Raya%20Rw.%20Kuning%20No.240%2C%20RT.1%2FRW.6%2C%20Pulo%20Gebang%2C%20Kec.%20Cakung%2C%20Kota%20Jakarta%20Timur%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2013950!5e0!3m2!1sid!2sid!4v1751967741779!5m2!1sid!2sid" class="map-frame" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                           </a>
+                    </div>
+                    <address>Jl. Contoh No. 123, Jakarta Utara, Indonesia</address>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 Arwan Edu. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Kebijakan Privasi</a>
+                    <a href="#">Syarat & Ketentuan</a>
+                </div>
+                <p>© 2025 Arwan Edu. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
+    
+    <a href="https://wa.me/628123456789?text=Halo%20Arwan%20Edu,%20saya%20ingin%20bertanya%20tentang%20kursus." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script src="script.js"></script>
 </body>

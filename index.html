@@ -111,25 +111,26 @@
                     </div>
                 </div>
             </div>
-            </div>
         </section>
 
-        <section id="video-frame" class="info-section bg-gray">
-            <div class="container">
-                <div class="video-card-container">
-                    <h3>Kuasai Bahasa Inggris dengan Video</h3>
-                    <p class="subtitle">Tonton video interaktif di bawah ini untuk memulai belajar dan meningkatkan
-                        skill Anda!</p>
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/HLloRsgQLE4"
-                            title="YouTube video player" frameborder="0"
+        <section id="english-video-section" class="english-video-section-wrapper info-section">
+            <div class="english-video-container">
+                <div class="english-video-content-left">
+                    <h2>LEVEL UP YOUR ENGLISH WITH OUR INTERACTIVE CLASSES</h2>
+                    <p>Unlock your full potential! Our engaging video lessons and live interactive sessions make learning English fun and effective. Immerse yourself in practical conversations and master the language with confidence.</p>
+                </div>
+                <div class="english-video-panel">
+                    <div class="english-main-video-player">
+                        <iframe id="englishYoutubeVideoPlayer"
+                            src="http://googleusercontent.com/youtube.com/embed/sA-eN2G1BqA?autoplay=0&mute=1&controls=1&showinfo=0&rel=0&loop=1&playlist=sA-eN2G1BqA"
+                            frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen></iframe>
+                        </div>
                 </div>
             </div>
         </section>
-
         <section id="testimonials" class="info-section">
             <div class="container">
                 <h3>Apa Kata Mereka?</h3>
@@ -209,7 +210,6 @@
             </div>
         </section>
 
-        <!-- FAQ Section Start -->
         <section id="faq" class="info-section bg-gray">
             <div class="container">
                 <h3>Pertanyaan Umum (FAQ)</h3>
@@ -277,8 +277,7 @@
                 </div>
             </div>
         </section>
-        <!-- FAQ Section End -->
-    </main>
+        </main>
 
     <footer class="new-footer-style">
         <div class="container">
@@ -289,10 +288,10 @@
                         kursus bahasa Inggris yang relevan dan praktis. Kami menghadirkan pengalaman nyata untuk
                         mencetak generasi yang kompeten dan siap kerja.</p>
                     <div class="social-icons">
-                        <a href="https://www.instagram.com/arwanedu/"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=61578683195086"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="https://wa.me/628123456789?text=Halo%20Arwan%20Edu,%20saya%20ingin%20bertanya%20tentang%20kursus."><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
@@ -300,7 +299,7 @@
                     <h3>Navigasi</h3>
                     <ul>
                         <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                        <li><a href="Kursus.html"><i class="fas fa-book-open"></i> Kursus</a></li>
+                        <li><a href="courses.html"><i class="fas fa-book-open"></i> Kursus</a></li>
                         <li><a href="about.html"><i class="fas fa-users"></i> Tentang Kami</a></li>
                         <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Kontak</a></li>
                         <li><a href="register.html"><i class="fas fa-user-plus"></i> Daftar / Login</a></li>
@@ -348,6 +347,71 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Testimonial Swiper initialization
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                },
+            });
+
+            // FAQ Accordion functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Video Autoplay on Scroll (for the english video section)
+            const englishYoutubeVideoPlayer = document.getElementById('englishYoutubeVideoPlayer');
+            const englishVideoSection = document.getElementById('english-video-section');
+
+            if (englishYoutubeVideoPlayer && englishVideoSection) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        const currentSrc = englishYoutubeVideoPlayer.src;
+                        if (entry.isIntersecting) {
+                            // Play video when section is in view
+                            if (!currentSrc.includes("autoplay=1")) {
+                                englishYoutubeVideoPlayer.src = currentSrc.replace("autoplay=0", "autoplay=1");
+                            }
+                        } else {
+                            // Pause video when section is out of view
+                            if (currentSrc.includes("autoplay=1")) {
+                                englishYoutubeVideoPlayer.src = currentSrc.replace("autoplay=1", "autoplay=0");
+                            }
+                            // Optionally, stop the video entirely by reloading it
+                            englishYoutubeVideoPlayer.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+                        }
+                    });
+                }, { threshold: 0.5 }); // Adjust threshold as needed (0.5 means 50% of the element is visible)
+
+                observer.observe(englishVideoSection);
+            }
+        });
+    </script>
 </body>
 
 </html>

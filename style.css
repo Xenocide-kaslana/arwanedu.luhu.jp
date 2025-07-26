@@ -3,10 +3,17 @@
     --primary-color: #004d99; /* A deeper, more professional blue */
     --secondary-color: #007bff; /* Bright blue for accents */
     --accent-color: #28a745; /* Vibrant green for CTAs */
-    --light-bg: #f4f7f9; /* Soft light blue/grey */
+    --light-bg: #f4f7f9; /* Soft light blue/grey - This will be the main background for the video section */
     --dark-text: #343a40;
     --white: #ffffff;
     --grey-text: #6c757d;
+
+    /* Colors for the video section to fit the grey theme */
+    --english-section-bg: var(--light-bg); /* Use light-bg as main background */
+    --english-panel-bg: var(--white); /* White background for the main panel */
+    --english-video-border: var(--secondary-color); /* Bright blue border for the video frame */
+    --english-heading-color: var(--primary-color);
+    --english-paragraph-color: var(--grey-text);
 }
 
 body {
@@ -238,20 +245,14 @@ main {
     background-color: var(--white);
 }
 
-#video-frame {
-    background-color: var(--light-bg);
-}
-
 #testimonials {
     background-color: var(--white);
-    /* Add margin-bottom to create space below testimonials section */
-    margin-bottom: 50px; /* Adjust as needed for desired spacing */
+    margin-bottom: 50px;
 }
 
 #faq {
     background-color: var(--light-bg);
 }
-
 
 .info-section h3 {
     font-size: 2.5em;
@@ -345,46 +346,174 @@ main {
     display: inline-block;
 }
 
-/* Video Frame Styles */
-#video-frame .container {
-    max-width: 900px;
+/* START: REVISED VIDEO SECTION STYLES (English Course Theme) */
+.english-video-section-wrapper {
+    background-color: var(--english-section-bg); /* Use light-bg as main background */
+    padding: 80px 0;
+    color: var(--english-heading-color);
+    overflow: hidden;
+    position: relative;
 }
 
-.video-card-container {
-    background-color: var(--white);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    text-align: center;
+/* No background pattern */
+.english-video-section-wrapper::before {
+    content: none;
 }
 
-.video-card-container h3 {
-    font-size: 2.2em;
-    color: var(--primary-color);
+.english-video-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    position: relative;
+    z-index: 1;
 }
 
-.video-card-container .subtitle {
-    margin-top: 10px;
-    margin-bottom: 30px;
+.english-video-content-left {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    padding-left: 20px;
 }
 
-.video-wrapper {
+.english-video-content-left h2 {
+    font-size: 3.2em;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--english-heading-color);
+    text-transform: uppercase;
+}
+
+.english-video-content-left p {
+    font-size: 1.05em;
+    line-height: 1.6;
+    color: var(--english-paragraph-color);
+    max-width: 500px;
+}
+
+.english-video-panel {
+    background-color: var(--english-panel-bg); /* White background for the main panel */
+    border-radius: 50px; /* Large border-radius for the outer panel */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Lighter shadow for a cleaner look */
+    padding: 30px;
+    flex: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 500px;
+    box-sizing: border-box;
+    border: 3px solid var(--english-video-border); /* Bright blue border for the video frame */
+}
+
+.english-main-video-player {
     position: relative;
     width: 100%;
+    max-width: 700px;
     padding-top: 56.25%; /* 16:9 Aspect Ratio */
-    border-radius: 10px;
+    border-radius: 40px; /* Large border-radius for the main video frame */
     overflow: hidden;
+    background-color: black; /* Fallback for video background */
+    box-sizing: border-box;
 }
 
-.video-wrapper iframe {
+.english-main-video-player iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    border: none;
 }
 
-/* Swiper-specific styles for testimonial-slider */
+/* No specific styles for live tag or info overlay as they are removed from HTML */
+
+/* END: REVISED VIDEO SECTION STYLES */
+
+/* Responsive Design for REVISED VIDEO SECTION */
+@media (max-width: 1300px) {
+    .english-video-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 25px;
+    }
+    .english-video-content-left {
+        min-width: unset;
+        padding-left: 0;
+    }
+    .english-video-panel {
+        min-width: unset;
+        width: 100%;
+        padding: 25px;
+        border-radius: 40px;
+    }
+    .english-main-video-player {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .english-video-section-wrapper {
+        padding: 60px 0;
+    }
+    .english-video-content-left h2 {
+        font-size: 2.5em;
+    }
+    .english-video-panel {
+        padding: 20px;
+        border-radius: 30px;
+    }
+    .english-main-video-player {
+        border-radius: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .english-video-content-left h2 {
+        font-size: 2em;
+    }
+    .english-video-panel {
+        padding: 15px;
+    }
+    .english-main-video-player {
+        border-radius: 20px;
+    }
+}
+
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Hide link text on small screens */
+.whatsapp-float span {
+    display: none;
+}
+
+
+/* Swiper-specific styles for testimonial-slider (existing, no changes) */
 .testimonial-slider {
     margin-top: 50px;
 }
@@ -467,7 +596,7 @@ main {
     color: var(--secondary-color) !important;
 }
 
-/* FAQ Section Styles */
+/* FAQ Section Styles (existing, no changes) */
 .faq-container {
     max-width: 900px;
     margin: 0 auto;
@@ -503,7 +632,7 @@ main {
     color: var(--primary-color);
     display: flex;
     align-items: center;
-    flex-grow: 1; /* Allow text to take available space */
+    flex-grow: 1;
 }
 
 .faq-question h4 .fa-question-circle {
@@ -531,7 +660,7 @@ main {
 }
 
 .faq-item.active .faq-answer {
-    max-height: 200px; /* Adjust as needed for content height */
+    max-height: 200px;
     padding: 20px 25px;
 }
 
@@ -543,569 +672,6 @@ main {
 
 
 /* Footer */
-.new-footer-style {
-    background-color: #002366;
-    color: var(--white);
-    padding: 60px 0 20px;
-    font-size: 1em;
-}
-
-.new-footer-style a {
-    color: var(--white);
-    transition: color 0.3s ease;
-}
-
-.new-footer-style a:hover {
-    color: var(--secondary-color);
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
-    text-align: left;
-}
-
-.new-footer-style h3 {
-    color: var(--secondary-color);
-    font-size: 1.4em;
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.footer-about p {
-    font-size: 0.9em;
-    margin-bottom: 20px;
-}
-
-.social-icons a {
-    font-size: 1.5em;
-    margin-right: 15px;
-    color: var(--white);
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: var(--secondary-color);
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: translateY(-3px);
-}
-
-.footer-nav ul, .footer-contact ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-nav li, .footer-contact li {
-    margin-bottom: 10px;
-    font-size: 0.9em;
-}
-
-.footer-nav i, .footer-contact i {
-    width: 25px;
-    color: var(--secondary-color);
-}
-
-.footer-partners .partner-block {
-    background-color: #003399;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.footer-partners .partner-block h4 {
-    font-size: 1.1em;
-    color: var(--white);
-    margin-bottom: 5px;
-}
-
-.footer-partners .partner-block p {
-    font-size: 0.8em;
-    color: rgba(255, 255, 255, 0.8);
-    margin: 0;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.15);
-    font-size: 0.9em;
-}
-
-.footer-links a {
-    margin: 0 15px;
-    text-decoration: none;
-}
-
-/* Animations */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Specific styles for other pages (about, courses, contact, register) */
-.page-title {
-    padding: 80px 0 40px;
-    text-align: center;
-    background-color: var(--white);
-}
-
-.page-title h2 {
-    font-size: 3em;
-    color: var(--primary-color);
-}
-
-.about-section, .course-detail-section, .registration-section, .contact-section {
-    padding: 60px 0;
-}
-
-.about-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 50px;
-}
-
-.about-text {
-    flex: 2;
-    min-width: 300px;
-    line-height: 1.9;
-}
-
-.about-image {
-    flex: 1;
-    min-width: 280px;
-    text-align: center;
-}
-
-.about-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-.team-section {
-    background-color: var(--light-bg);
-}
-
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.team-member {
-    background-color: var(--white);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    text-align: center;
-    transition: transform 0.4s ease;
-}
-
-.team-member:hover {
-    transform: translateY(-10px);
-}
-
-.team-member img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border: 4px solid var(--secondary-color);
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
-}
-
-.team-member h4 {
-    font-size: 1.5em;
-    margin-bottom: 5px;
-    color: var(--primary-color);
-}
-
-.team-member p {
-    font-style: italic;
-    color: var(--grey-text);
-}
-
-.course-item {
-    background-color: var(--white);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    margin-bottom: 40px;
-}
-
-.course-item h3 {
-    font-size: 2.2em;
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 10px;
-    margin-bottom: 25px;
-}
-
-.course-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 25px;
-    margin-bottom: 30px;
-}
-
-.course-table th, .course-table td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-.course-table th {
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-weight: bold;
-}
-
-.course-table tr:nth-child(even) {
-    background-color: #f8f9fa;
-}
-
-.course-table tr:hover {
-    background-color: #f1f1f1;
-}
-
-.btn-register-course {
-    display: block;
-    width: fit-content;
-    margin: 0 auto;
-    background-color: var(--accent-color);
-    color: var(--white);
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-size: 1.1em;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.btn-register-course:hover {
-    background-color: #218838;
-    transform: translateY(-3px);
-}
-
-.registration-form-container, .contact-form-block {
-    background-color: var(--white);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 25px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 600;
-    color: var(--dark-text);
-}
-
-.form-group input, .form-group select, .form-group textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1em;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-    border-color: var(--secondary-color);
-    outline: none;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
-}
-
-.form-group textarea {
-    min-height: 150px;
-}
-
-.contact-content-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    align-items: start;
-}
-
-.contact-info-block {
-    background-color: var(--light-bg);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-
-.contact-info-block h3 {
-    font-size: 2em;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
-.contact-info-block p {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: flex-start;
-    line-height: 1.5;
-}
-
-.contact-info-block p i {
-    margin-right: 15px;
-    font-size: 1.4em;
-    color: var(--secondary-color);
-    margin-top: 3px;
-}
-
-.contact-info-block iframe {
-    width: 100%;
-    height: 300px;
-    border-radius: 12px;
-    margin-top: 25px;
-}
-
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.modal.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-content {
-    background-color: var(--white);
-    padding: 50px;
-    border-radius: 15px;
-    text-align: center;
-    transform: translateY(-50px);
-    transition: transform 0.4s ease;
-}
-
-.modal.show .modal-content {
-    transform: translateY(0);
-}
-
-.checkmark-icon {
-    font-size: 4em;
-    color: var(--accent-color);
-    margin-bottom: 20px;
-    animation: bounceIn 0.8s ease-out;
-}
-
-.modal-content h3 {
-    font-size: 2em;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-.modal-content p {
-    color: var(--dark-text);
-}
-
-@keyframes bounceIn {
-    0% { transform: scale(0.3); opacity: 0; }
-    50% { transform: scale(1.1); opacity: 1; }
-    100% { transform: scale(1); }
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-    .hero-content h2 {
-        font-size: 2.8em;
-    }
-    .hero-content p {
-        font-size: 1.1em;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        padding-top: 130px;
-    }
-    header .container {
-        flex-direction: column;
-    }
-    .logo {
-        margin-bottom: 15px;
-    }
-    nav ul {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    nav ul li {
-        margin: 5px 0;
-        border-top: 1px solid #eee;
-    }
-    nav ul li:first-child {
-        border-top: none;
-    }
-    .btn-register {
-        margin: 15px 0 0;
-        width: 100%;
-    }
-    .hero-section {
-        padding: 80px 0;
-    }
-    .hero-content h2 {
-        font-size: 2.2em;
-    }
-    .info-section {
-        padding: 50px 0;
-    }
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .footer-section.social {
-        margin-top: 20px;
-    }
-
-    /* FAQ Responsive */
-    .faq-question {
-        padding: 15px 20px;
-    }
-    .faq-question h4 {
-        font-size: 1em;
-    }
-    .faq-answer {
-        padding: 15px 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo h1 {
-        font-size: 1.8em;
-    }
-    .hero-content h2 {
-        font-size: 2em;
-    }
-    .hero-content p {
-        font-size: 1em;
-    }
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.9em;
-    }
-}
-
-/* Floating WhatsApp Button */
-.whatsapp-float {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 60px;
-    height: 60px;
-    background-color: #25d366;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    z-index: 1000;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-}
-
-/* Hide link text on small screens */
-.whatsapp-float span {
-    display: none;
-}
-
-/* Video Frame Styles */
-#video-frame .container {
-    max-width: 900px;
-}
-
-.video-card-container {
-    background-color: var(--white);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.video-card-container h3 {
-    font-size: 2.2em;
-    color: var(--primary-color);
-}
-
-.video-card-container .subtitle {
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-
-.video-wrapper {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* Footer (Updated) */
 .new-footer-style {
     background-color: #002366;
     color: var(--white);

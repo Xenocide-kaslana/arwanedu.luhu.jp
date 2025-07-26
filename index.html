@@ -210,11 +210,14 @@
         </section>
 
         <section id="faq" class="info-section bg-gray">
-            <div class="container">
-                <h3>Pertanyaan Umum (FAQ)</h3>
-                <p class="subtitle">Temukan jawaban atas pertanyaan yang sering diajukan tentang kursus bahasa Inggris
-                    kami.</p>
-                <div class="faq-container">
+           <div class="container">
+    <div class="faq-left">
+        <span class="faq-label">FAQ</span>
+        <h3>Pertanyaan Umum (FAQ)</h3>
+        <p class="subtitle">Temukan jawaban atas pertanyaan yang sering diajukan tentang kursus bahasa Inggris kami.</p>
+<button class="talk-btn" onclick="window.location.href='contact.html'">Talk to us</button>
+    </div>
+    <div class="faq-container">
                     <div class="faq-item">
                         <div class="faq-question">
                             <h4><i class="fas fa-question-circle"></i> Apa saja tingkatan kursus yang tersedia di Arwan
@@ -371,16 +374,6 @@
                         spaceBetween: 30,
                     },
                 },
-            });
-
-            // FAQ Accordion functionality
-            const faqItems = document.querySelectorAll('.faq-item');
-
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                question.addEventListener('click', () => {
-                    item.classList.toggle('active');
-                });
             });
 
             // Video Autoplay on Scroll (for the english video section)

@@ -2,7 +2,7 @@
 
 /* Hero Section */
 .about-hero-section {
-    background: linear-gradient(rgba(0, 77, 153, 0.85), rgba(0, 77, 153, 0.85)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxr_yCZUHi1caQDNTp5rYAqPKJRmzomCfNaA&s') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 77, 153, 0.85), rgba(0, 77, 153, 0.85)), url('https://cdn.imgchest.com/files/45xcvqvm527.jpg') no-repeat center center/cover;
     color: var(--white);
     text-align: center;
     padding: 120px 0;
@@ -261,7 +261,7 @@
 
 /* Call to Action Section */
 .cta-section {
-    background: linear-gradient(rgba(0, 123, 255, 0.9), rgba(0, 77, 153, 0.9)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxr_yCZUHi1caQDNTp5rYAqPKJRmzomCfNaA&s') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 123, 255, 0.9), rgba(0, 77, 153, 0.9)), url('https://cdn.imgchest.com/files/45xcvqvm527.jpg') no-repeat center center/cover;
     color: var(--white);
     text-align: center;
     padding: 80px 0;

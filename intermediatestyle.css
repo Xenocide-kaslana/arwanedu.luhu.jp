@@ -2,7 +2,7 @@
 
 /* Hero Section */
 .intermediate-hero-section {
-    background: linear-gradient(rgba(0, 77, 153, 0.85), rgba(0, 77, 153, 0.85)), url('https://images.unsplash.com/photo-1546410531-bb4492f99076?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 77, 153, 0.85), rgba(0, 77, 153, 0.85)), url('https://cdn.imgchest.com/files/7pjcqdqb827.jpg') no-repeat center center/cover;
     color: var(--white);
     text-align: center;
     padding: 120px 0;
@@ -195,7 +195,7 @@
 
 /* Call to Action Section (Specific to Course Pages) */
 .cta-section.bg-primary-dark {
-    background: linear-gradient(rgba(0, 77, 153, 0.9), rgba(0, 123, 255, 0.9)), url('https://images.unsplash.com/photo-1503676106-9c4c4784a92c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 77, 153, 0.9), rgba(0, 123, 255, 0.9)), url('https://cdn.imgchest.com/files/7pjcqdqb827.jpg') no-repeat center center/cover;
     color: var(--white); /* This sets the default text color for the section */
     text-align: center;
     padding: 80px 0;

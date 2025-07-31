@@ -1319,3 +1319,172 @@ main {
     color: var(--secondary-color);
     font-weight: 600;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Ganti atau tambahkan gaya ini di style.css Anda */
+
+/* === FORM STYLING === */
+.registration-section {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.registration-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.registration-card h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.form-subtitle {
+    color: var(--grey-text);
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--dark-text);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.btn-register-form {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-register-form:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+}
+
+.auth-footer {
+    margin-top: 25px;
+    font-size: 0.95em;
+    color: var(--grey-text);
+}
+
+.auth-footer a {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+
+/* === POPUP MODAL STYLING (SESUAI GAMBAR) === */
+
+.modal {
+    display: none; /* Sembunyikan secara default */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 16px; /* Sudut sangat melengkung */
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    transition: transform 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.checkmark-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px auto;
+    background-color: #28a745; /* Hijau */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkmark-icon-wrapper i.fa-check {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.modal-content h3 {
+    color: #004d99; /* Biru tua */
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.modal-content p {
+    color: #6c757d; /* Abu-abu */
+    font-size: 1em;
+    margin: 0;
+}
